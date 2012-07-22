@@ -4,8 +4,10 @@
 class VendingMachine
 
     def pre_filter(money)
-        return true if money == 10 
-        return true if money == 100 
+        case money
+        when 10,50,100,500,1000 then
+            return true
+        end
         false
     end
 
