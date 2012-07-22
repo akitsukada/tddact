@@ -1,9 +1,20 @@
 # -*- coding:UTF-8 -*-
 require 'vending_machine'
+require 'drink_stock'
 
 describe VendingMachine do
     before :each do
         @machine = VendingMachine.new
+    end
+
+    context "buyable_itmes" do
+        it "120円以上投入済みのとき購入可能か確認する" do
+            @machine.receive(100)
+            @machine.receive(10)
+            @machine.receive(10)
+	    @machine.buyable_items.should == [:coke]
+        end
+	
     end
 
     context "refund" do
