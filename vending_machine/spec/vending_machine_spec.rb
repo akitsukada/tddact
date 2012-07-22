@@ -21,6 +21,10 @@ describe VendingMachine do
             @machine.pre_filter(10).should be_true
         end
 
+	it "100だったらtrue" do
+	    @machine.pre_filter(100).should be_true
+	end
+
     end
 
 end
