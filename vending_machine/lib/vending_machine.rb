@@ -18,7 +18,9 @@ class VendingMachine
     end
 
     def refund
-      @received_total_money
+      return_money = @received_total_money
+      @received_total_money = 0
+      return_money
     end
 
 end

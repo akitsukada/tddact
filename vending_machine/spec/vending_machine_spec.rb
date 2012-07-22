@@ -11,7 +11,14 @@ describe VendingMachine do
             @machine.receive(10)
             @machine.refund.should == 10
         end
+
+        it "返金があった場合、投入金額を０円にする" do
+            @machine.receive(10)
+            @machine.refund
+            @machine.received_total_money.should == 0
+        end
     end
+
     context "received_total_money" do
         it "今の金額を返す" do
             @machine.receive(10)
