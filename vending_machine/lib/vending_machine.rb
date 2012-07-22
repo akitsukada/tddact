@@ -17,4 +17,8 @@ class VendingMachine
         false
     end
 
+    def refund
+      @received_total_money
+    end
+
 end

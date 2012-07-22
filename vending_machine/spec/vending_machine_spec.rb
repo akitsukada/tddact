@@ -6,6 +6,12 @@ describe VendingMachine do
         @machine = VendingMachine.new
     end
 
+    context "refund" do
+        it "現在の投入金額を返す" do
+            @machine.receive(10)
+            @machine.refund.should == 10
+        end
+    end
     context "received_total_money" do
         it "今の金額を返す" do
             @machine.receive(10)
