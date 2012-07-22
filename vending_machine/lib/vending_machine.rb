@@ -6,11 +6,11 @@ class VendingMachine
 
     def initialize
        @received_total_money = 0
+       @accept_money_list = [10, 50, 100, 500, 1000]
     end
 
     def receive(money)
-        case money
-        when 10,50,100,500,1000 then
+        if @accept_money_list.index(money)
             @received_total_money += money
             return true
         end
