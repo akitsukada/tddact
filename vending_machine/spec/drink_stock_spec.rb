@@ -10,7 +10,7 @@ describe DrinkStock do
         it "初期在庫表示" do
             @drinkstock.stockhash[:coke][:name].should == "コーラ"
             @drinkstock.stockhash[:coke][:price].should == 120
-            @drinkstock.stockhash[:coke][:amount].should == 5 
+            @drinkstock.stockhash[:coke][:amount].should == 5
         end
     end
 
