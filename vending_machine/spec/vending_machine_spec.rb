@@ -66,6 +66,25 @@ describe VendingMachine do
             @machine.receive(1000).should be_true
         end
 
+        it "1だったらfalse" do
+            @machine.receive(1).should be_false
+        end
+
+        it "5だったらfalse" do
+            @machine.receive(5).should be_false
+        end
+
+        it "2000だったらfalse" do
+            @machine.receive(2000).should be_false
+        end
+
+        it "5000だったらfalse" do
+            @machine.receive(5000).should be_false
+        end
+
+        it "10000だったらfalse" do
+            @machine.receive(10000).should be_false
+        end
     end
 
 end
