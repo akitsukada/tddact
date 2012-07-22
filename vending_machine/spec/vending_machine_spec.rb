@@ -9,7 +9,7 @@ describe VendingMachine do
             @machine = VendingMachine.new
         end
 
-        it "int以外ならfalse(文字列ならfalese)" do
+        it "文字列ならfalse" do
             @machine.receive("a").should be_false
         end
 
@@ -17,23 +17,23 @@ describe VendingMachine do
             @machine.receive("nil").should be_false
         end
 
-        it "10円だったらtrue" do
+        it "10だったらtrue" do
             @machine.receive(10).should be_true
         end
 
-        it "50円だったらtrue" do
+        it "50だったらtrue" do
             @machine.receive(50).should be_true
         end
 
-        it "100円だったらtrue" do
+        it "100だったらtrue" do
             @machine.receive(100).should be_true
         end
 
-        it "500円だったらtrue" do
+        it "500だったらtrue" do
             @machine.receive(500).should be_true
         end
 
-        it "1000円だったらtrue" do
+        it "1000だったらtrue" do
             @machine.receive(1000).should be_true
         end
 
