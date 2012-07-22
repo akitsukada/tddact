@@ -12,6 +12,19 @@ describe DrinkStock do
             @drinkstock.stockhash[:coke][:price].should == 120
             @drinkstock.stockhash[:coke][:amount].should == 5
         end
+
+        it "商品を指定すると価格が取得できます！" do
+            @drinkstock.drink_price(:coke).should == 120
+        end
+
+        it "商品を指定すると在庫数が取得できます！" do
+            @drinkstock.drink_amount(:coke).should == 5
+        end
+
+        it "商品を指定すると名前が取得できます！" do
+            @drinkstock.drink_name(:coke).should == "コーラ"
+        end
+
     end
 
 end

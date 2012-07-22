@@ -9,4 +9,15 @@ class DrinkStock
     }
   end
 
+  def drink_price(drink_id)
+    @stockhash[drink_id][:price]
+  end
+
+  def drink_amount(drink_id)
+    @stockhash[drink_id][:amount]
+  end
+
+  def drink_name(drink_id)
+    @stockhash[drink_id][:name]
+  end
 end
