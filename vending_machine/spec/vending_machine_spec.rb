@@ -9,7 +9,7 @@ describe VendingMachine do
             @machine = VendingMachine.new
         end
 
-        it "int以外ならfalse" do
+        it "int以外ならfalse(文字列ならfalese)" do
             @machine.pre_filter("a").should be_false
         end
 
