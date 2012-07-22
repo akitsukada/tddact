@@ -13,6 +13,10 @@ describe VendingMachine do
             @machine.pre_filter("a").should be_false
         end
 
+        it "nilだったらfalse" do
+            @machine.pre_filter("nil").should be_false
+        end
+
     end
 
 end
