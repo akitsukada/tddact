@@ -7,10 +7,10 @@ describe VendingMachine do
     end
 
     context "received_total_money" do
-	it "今の金額を返す" do
-	  @machine.receive(10)
-	  @machine.received_total_money.should == 10
-	end 
+        it "今の金額を返す" do
+            @machine.receive(10)
+            @machine.received_total_money.should == 10
+        end 
     end
 
     context "receive" do
