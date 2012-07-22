@@ -13,6 +13,10 @@ describe VendingMachine do
             @machine.receive("a").should be_false
         end
 
+        it "Arrayならfalse" do
+            @machine.receive([100]).should be_false
+        end
+
         it "nilだったらfalse" do
             @machine.receive("nil").should be_false
         end
