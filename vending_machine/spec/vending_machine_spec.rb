@@ -17,6 +17,10 @@ describe VendingMachine do
             @machine.pre_filter("nil").should be_false
         end
 
+        it "10円だったらtrue" do
+            @machine.pre_filter(10).should be_true
+        end
+
     end
 
 end
