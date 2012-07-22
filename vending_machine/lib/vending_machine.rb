@@ -3,7 +3,7 @@
 
 class VendingMachine
 
-    def pre_filter(money)
+    def receive(money)
         case money
         when 10,50,100,500,1000 then
             return true
