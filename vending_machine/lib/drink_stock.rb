@@ -11,11 +11,9 @@ class DrinkStock
 
   def buyable_items(money)
     buyable_item_list = []
-    @stockhash.each {|k, v|
-      if v[:price] >= 120
-        buyable_item_list.push(k)
-      end
-    }
+    @stockhash.each do |k, v|
+      buyable_item_list.push(k) if v[:price] >= 120
+    end
     buyable_item_list
   end
 
