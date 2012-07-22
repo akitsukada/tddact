@@ -10,7 +10,13 @@ describe VendingMachine do
         it "今の金額を返す" do
             @machine.receive(10)
             @machine.received_total_money.should == 10
-        end 
+        end
+
+        it "10円を二回投入した場合の総額を返す" do
+            @machine.receive(10)
+            @machine.receive(10)
+            @machine.received_total_money.should == 20
+        end
     end
 
     context "receive" do
