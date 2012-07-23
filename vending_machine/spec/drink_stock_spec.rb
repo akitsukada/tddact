@@ -6,12 +6,12 @@ describe DrinkStock do
     @drinkstock = DrinkStock.new
   end
 
-  context "120円投入済みでコーラが購入可能か確認" do
+  context "buyable_items" do
     it "120円で購入可能な商品を返す" do
       @drinkstock.buyable_items(120).should == [:coke]
     end
   end
-  context "初期在庫の確認" do
+  context "stockhash" do
     it "初期在庫表示" do
       @drinkstock.stockhash[:coke][:name].should == "コーラ"
       @drinkstock.stockhash[:coke][:price].should == 120
