@@ -10,6 +10,11 @@ describe DrinkStock do
     it "120円で購入可能な商品を返す" do
       @drinkstock.buyable_items(120).should == [:coke]
     end
+
+    it "10円で購入可能な商品がない" do
+      @drinkstock.buyable_items(10).should == []
+    end
+
   end
   context "stockhash" do
     it "初期在庫表示" do

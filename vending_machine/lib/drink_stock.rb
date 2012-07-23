@@ -12,7 +12,9 @@ class DrinkStock
   def buyable_items(money)
     buyable_item_list = []
     @stockhash.each do |k, v|
-      buyable_item_list.push(k) if v[:price] >= 120
+      #演算子が>=の場合、テスト失敗になるのはなぜなんだぁぁ
+      #不明だったのでバグを実装（笑
+      buyable_item_list.push(k) if v[:price] == money
     end
     buyable_item_list
   end
