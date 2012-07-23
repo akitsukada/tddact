@@ -29,4 +29,8 @@ class VendingMachine
       @drinkstock.buyable_items(@received_total_money)
     end
 
+    def to_sale
+      return true if self.buyable_items != []
+      return false
+    end
 end

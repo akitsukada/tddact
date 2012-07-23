@@ -14,7 +14,20 @@ describe VendingMachine do
       @machine.receive(10)
       @machine.buyable_items.should == [:coke]
     end
+  end
 
+  context "to_sale" do
+    it "購入可能商品が存在する場合、Trueを返す" do
+      @machine.receive(100)
+      @machine.receive(10)
+      @machine.receive(10)
+      @machine.to_sale.should be_true
+    end
+
+    it "購入可能商品が存在しない場合、FALSEを返す" do
+      @machine.receive(10)
+      @machine.to_sale.should be_false
+    end
   end
 
   context "refund" do
